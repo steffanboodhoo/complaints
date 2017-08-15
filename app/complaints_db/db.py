@@ -1,6 +1,7 @@
 from models import employee, issue, Team
 from app import db
 from pprint import pprint 
+from datetime import date, datetime
 
 def addEmployee(first_name, last_name, user_id, team_id):
 	new_employee = employee(first_name, last_name, user_id, team_id)
@@ -29,6 +30,10 @@ def getIssue():
 
 	results = []
 	for row in data:
+		if row.__dict__['date_created']:
+			row.__dict__['date_created'] = row.__dict__['date_created'].isoformat()
+		if row.__dict__['date_resolved']:
+			row.__dict__['date_resolved'] = row.__dict__['date_resolved'].isoformat()
 		#remove unwanted field
 		del row.__dict__['_sa_instance_state']
 		#convert to dictionary and append to results

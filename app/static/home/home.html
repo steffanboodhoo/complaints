@@ -6,17 +6,16 @@
 	<body ng-controller="homeCtrl">
 		
 		<md-tabs md-stretch-tabs = "always" md-dynamic-height md-border-buttom>
- 	
-			<md-tab label="Submit Issue">
-				<md-content class='md-padding'>
-					<div ng-include="'static/submit_issue/form.html'" ng-controller="formCtrl"></div>
-				</md-content>
-			</md-tab>
 
 			<md-tab label="Team's Issues">
 				<md-content class='md-padding'>
-					<!-- <div ng-include="'static/_admin_logs/logs.html'" ng-controller="adminLogCtrl"></div> -->
-					Something else
+					<div ng-include="'static/team_issues/team_issue.html'" ng-controller="teamIssueCtrl"></div>
+				</md-content>
+			</md-tab>
+
+			<md-tab label="Submit Issue">
+				<md-content class='md-padding'>
+					<div ng-include="'static/submit_issue/form.html'" ng-controller="formCtrl"></div>
 				</md-content>
 			</md-tab>
 
@@ -35,7 +34,10 @@
     <script src="static/node_modules/angular-animate/angular-animate.js"></script> 
     <script src="static/node_modules/angular-material/angular-material.js"></script> 
 	<script src="static/home/home.js"></script>
+	<script src="static/services/services.js"></script>
 
 	<script src="static/submit_issue/form.js"></script>
+	<script src="static/team_issues/team_issue.js"></script>
+	
 
 </html>

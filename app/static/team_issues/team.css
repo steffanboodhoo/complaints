@@ -1,0 +1,10 @@
+md-whiteframe {
+    background: #fff;
+    margin: 1%;
+    padding: 2%;
+    /*height: 100px; */
+}
+
+.row{
+	width:100%;
+}

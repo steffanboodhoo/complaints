@@ -1,6 +1,7 @@
 from app import App
 from flask import request, session
 from pprint import pprint
+
 import json
 
 #remove after
@@ -33,10 +34,10 @@ def users():
 
 @App.route('/issues',methods=['GET','POST'])
 def issues():
-	results = None
+	results = {"status":"failure"}
 	if request.method == 'GET':
-		results = db.getIssue()
-		pprint(results)
+		results['data'] = db.getIssue()
+		results['status'] = 'success'
 		results = json.dumps(results)
 	elif request.method == 'POST':
 		results = 'NOTHING YET'
