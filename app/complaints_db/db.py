@@ -8,8 +8,11 @@ def addEmployee(first_name, last_name, user_id, team_id):
 	db.session.add(employee)
 	db.session.commit()
 
-# def addIssue():
-
+def addIssue(data):
+	new_issue = issue(data['date_created'], data['creator_id'], data['issue_team_id'], data['description'])
+	db.session.add(new_issue)
+	db.session.commit()
+	return 'success'
 
 def getEmployee():
 	# data = None

@@ -7,17 +7,19 @@
 		
 		<md-tabs md-stretch-tabs = "always" md-dynamic-height md-border-buttom>
 
+			<md-tab label="Submit Issue">
+				<md-content class='md-padding'>
+					<div ng-include="'static/submit_issue/form.html'" ng-controller="formCtrl"></div>
+				</md-content>
+			</md-tab>
+			
 			<md-tab label="Team's Issues">
 				<md-content class='md-padding'>
 					<div ng-include="'static/team_issues/team_issue.html'" ng-controller="teamIssueCtrl"></div>
 				</md-content>
 			</md-tab>
 
-			<md-tab label="Submit Issue">
-				<md-content class='md-padding'>
-					<div ng-include="'static/submit_issue/form.html'" ng-controller="formCtrl"></div>
-				</md-content>
-			</md-tab>
+			
 
 			<md-tab label="History">
 				<md-content class='md-padding'>

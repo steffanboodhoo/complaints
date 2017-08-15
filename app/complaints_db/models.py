@@ -22,13 +22,13 @@ class issue(db.Model):
 	issue_team_id = db.Column(db.Integer)
 	description = db.Column(db.String)
 
-	def __init__(self, issue_id, status, date_created, creator_id, date_resolved, resolver_id, issue_team_id, description):
-		self.issue_id = issue_id
-		self.status = status
+	def __init__(self, date_created, creator_id, issue_team_id, description):
+		self.issue_id = None
+		self.status = 'UNRESOLVED'
 		self.date_created = date_created
 		self.creator_id = creator_id
-		self.date_resolved = date_resolved
-		self.resolver_id = resolver_id
+		self.date_resolved = None
+		self.resolver_id = None
 		self.issue_team_id = issue_team_id
 		self.description = description
 

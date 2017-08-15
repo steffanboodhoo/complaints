@@ -6,7 +6,7 @@ angular.module('complaints')
 
 		api.issue ={
 			'postIssue':function( _data, success=null, failure=null){
-				return genReq($http({headers:{'Content-Type':'application/json'},method:'POST',url:'/issue',data:_data}), success, failure);
+				return genReq($http({headers:{'Content-Type':'application/json'},method:'POST',url:'/issues',data:_data}), success, failure);
 			},
 			'getIssues':function(_params, success=null, failure=null){
 				return genReq($http({method:'GET',url:'/issues',params:_params}), success, failure);

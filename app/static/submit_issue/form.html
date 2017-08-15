@@ -4,8 +4,8 @@
 
     <div>
 		<md-input-container class="md-block" flex-gt-sm>
-	        <label>State</label>
-	        <md-select ng-model="user.state">
+	        <label>Team</label>
+	        <md-select ng-model="issue.issue_team_id">
 	          <md-option ng-repeat="team in teams" value="{{team.id}}">
 	            {{team.name}}
 	          </md-option>
@@ -16,12 +16,12 @@
      <div>
        <md-input-container class="md-block">
           <label>Description</label>
-          <textarea ng-model="user.description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+          <textarea ng-model="issue.description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
        </md-input-container>
     </div>
 
     <div>
-  		<md-button class="md-raised md-primary"> Submit </md-button>
+  		<md-button ng-click="submit()" class="md-raised md-primary"> Submit </md-button>
   	</div>
   </md-content>
 

@@ -38,10 +38,11 @@ def issues():
 	if request.method == 'GET':
 		results['data'] = db.getIssue()
 		results['status'] = 'success'
-		results = json.dumps(results)
 	elif request.method == 'POST':
-		results = 'NOTHING YET'
+		data = request.get_json()
+		results['status'] = db.addIssue(data)
 
+	results = json.dumps(results)
 	return results
 
 
