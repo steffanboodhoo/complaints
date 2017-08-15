@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/steffanboodhoo/complaints/issues"
   },
-  "homepage": "https://github.com/steffanboodhoo/complaints#readme"
+  "homepage": "https://github.com/steffanboodhoo/complaints#readme",
+  "dependencies": {
+    "angular-material": "^1.1.4"
+  }
 }
